@@ -1,29 +1,6 @@
 name: Workflow Caller
-
 on:
-
   push:
-
-    branches:
-
-      - main
-
- 
-
 jobs:
-
-  call-workflow:
-
-    runs-on: ubuntu-latest
-
-    steps:
-
-      - name: Checkout repository
-
-        uses: actions/checkout@v2
-
- 
-
-      - name: Run Reusable Workflow
-
-        uses: .github/workflows/workflow.yml
+ Reusable Workflow
+  uses: .github/workflows/maven-cache.yml
