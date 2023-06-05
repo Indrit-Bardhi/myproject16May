@@ -2,7 +2,7 @@ name: Java CI with Maven
 
 on:
  workflow_dispatch:
- workflow_call:
+ push:
  
 jobs:
  build:
@@ -15,10 +15,5 @@ jobs:
      java-version: '11'
      distribution: 'temurin'
      cache: maven
-  - name: Cache Maven Dependecies
-    uses: actions/cache@v3
-    with:
-     path: ~/.me
-     key: ${{ runner.os }}-cache
   - name: Build with Maven
     run: mvn clean install
