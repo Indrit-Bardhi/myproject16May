@@ -21,11 +21,8 @@ jobs:
      java-version: "${{ matrix.version }}"
      distribution: 'temurin'
      cache: maven
-     
-  - name: Cache Maven Dependecies
-    uses: actions/cache@v3
-    with:
-     path: ~/.me
-     key: ${{ runner.os }}-cache
-  - name: Build with Maven
-    run: mvn -B package --file pom.xml
+  - name: Packaging Jar
+    id: packaging-jar
+    shell: bash
+    run: mvn clean install  
+
