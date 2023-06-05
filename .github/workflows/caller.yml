@@ -3,4 +3,4 @@ on:
   push:
 jobs:
  Reusable Workflow
-  uses: .github/workflows/maven-cache.yml
+  uses: ./.github/workflows/maven-cache.yml
